@@ -15,7 +15,7 @@ class SystemAdministratorProfile
 	function addNewProfile(){
 		
 	
-		require_once("../Database/DB_Connect.php");
+		require_once("../database/DB_Connect.php");
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 		$usertype = $_POST["usertype"];

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact</title>
+    <title>Make an Announcement</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -115,13 +115,13 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Contact
-                    <small>System Administrator</small>
+                <h1 class="page-header">
+                    <small>Make an Announcement</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="Main Page.php">Home</a>
                     </li>
-                    <li class="active">Contact</li>
+                    <li class="active">Make an Announcement</li>
                 </ol>
             </div>
         </div>
@@ -140,16 +140,7 @@
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
             <div class="col-md-8">
-                <h5>Send your inquiries, suggestions, critisizms and feedbacks to the system administrator and the system admnistrator will be in contact with you regarding all your quiries.</h5>
-                <h5>Please include all the changes that have to be made to your profiles. Please Provide the necessary documents for the prove the respective changes. Please upload the file(s) in electronic version, below or handover the relevant document(s) to the system administrator. </h5>
                 <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Userame:</label>
-                            <input type="text" class="form-control" id="username" required data-validation-required-message="Please enter your username.">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Your Name:</label>
@@ -159,25 +150,51 @@
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Phone Number:</label>
+                            <label>Title of the Announcement:</label>
                             <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                            <label>Subtitle of the announcement:</label>
+                            <input type="email" class="form-control" id="email">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Message:</label>
+                            <label>Key Words:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Reference Links:</label>
+                            <input type="tel" class="form-control" id="phone" >
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Valid Date:</label>
+                            <input type="date" class="form-control" id="date" placeholder="The Annoucement should be published from this date" required data-validation-required-message="Please enter the valid starting date of the notice.">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Due Date:</label>
+                            <input type="date" class="form-control" id="date" required data-validation-required-message="Please enter the due date of the notice.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Add the Text Here : </label>
                             <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-warning">Upload a File</button>
+                    <button type="submit" class="btn btn-primary">Publish the Notice</button>
                 </form>
             </div>
 

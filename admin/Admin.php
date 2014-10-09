@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,82 +112,7 @@
         <!-- /.container -->
     </nav>
     <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Heading/Breadcrumbs -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Contact
-                    <small>System Administrator</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="Main Page.php">Home</a>
-                    </li>
-                    <li class="active">Contact</li>
-                </ol>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Content Row -->
-        <div class="row">
-            <!-- Map Column -->
-            
-            <!-- Contact Details Column -->
-            
-        </div>
-        <!-- /.row -->
-
-        <!-- Contact Form -->
-        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-md-8">
-                <h5>Send your inquiries, suggestions, critisizms and feedbacks to the system administrator and the system admnistrator will be in contact with you regarding all your quiries.</h5>
-                <h5>Please include all the changes that have to be made to your profiles. Please Provide the necessary documents for the prove the respective changes. Please upload the file(s) in electronic version, below or handover the relevant document(s) to the system administrator. </h5>
-                <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Userame:</label>
-                            <input type="text" class="form-control" id="username" required data-validation-required-message="Please enter your username.">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Your Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
-                    </div>
-                    <div id="success"></div>
-                    <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
+    <div>
         <!-- Footer -->
         <footer>
             <div class="row">

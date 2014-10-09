@@ -13,7 +13,7 @@ class Undergraduate{
 	private $degree;
 	
 	function completeDataSheet(){
-		require_once("../Database/DB_Connect.php");
+		require_once("../database/DB_Connect.php");
 		
 		
 		$first_name=$_POST["firstName"];
@@ -91,8 +91,8 @@ class Undergraduate{
 			
 			if(mysql_affected_rows()!=0){
 			echo "User already exists.<br>";
-			echo "<a href='form.php'> Add another user.<br></a>";
-			echo "<a href='Admin.php'> Home page<br></a>";
+			echo "<a href='../admin/add_undegraduate.php'> Add another user.<br></a>";
+			echo "<a href='../admin/Admin.php'> Home page<br></a>";
 			exit;
 		}
 			
@@ -112,8 +112,8 @@ class Undergraduate{
 			$insert_personalinfo=("INSERT INTO personal_information VALUES ('$national_id_number','$father_name','$mother_name','$guardian_name','$father_contact_number','$mother_contact_number','$guardian_contact_number','$father_occupation','$mother_occupation','$guardian_occupation','$family_income')") or die(mysql_error());
 			mysql_query($insert_personalinfo);
 			echo "Successfully added to personal information.<br>";
-			echo "<a href='form.php'> Add another user.<br>";
-			echo "<a href='Admin.php'> Home page<br></a>";
+			echo "<a href='../admin/add_undergraduate.php'> Add another user.<br>";
+			echo "<a href='../admin/Admin.php'> Home page<br></a>";
 			exit;
 		}	
 		

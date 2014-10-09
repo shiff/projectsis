@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php 
+if(isset($_POST["submit"])) 
+    { 
+    require_once("../php classes/Profile.php");
+    $my= new Profile;
+    $my->login();
+    } 
+?>
+
+
 <html lang="en">
 
 <head>
@@ -12,7 +21,7 @@
     <title>Home</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -26,6 +35,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script language="Javascript">
+function CheckForm(event)
+{
+    event.preventDefault();
+    if(document.formLogin.username.value=='')
+    {
+        window.alert("Enter the Username");
+        return false;
+    }
+    if(document.formLogin.password.value=='')
+    {
+        window.alert("Enter the password");
+        return false;
+    }
+}
+</script>
 
 </head>
 
@@ -42,13 +68,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Main Page.html">Student Interaction System</a>
+                <a class="navbar-brand" href="Main Page.php">Student Interaction System</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="Main Page.html">Home</a>
+                        <a href="Main Page.php">Home</a>
                     </li>
                     
                     <li>
@@ -61,7 +87,7 @@
                                 <a href="portfolio-2-col.html">View Announcements</a>
                             </li>
                             <li>
-                                <a href="portfolio-1-col.html">Make an Announcement</a>
+                                <a href="make_notice.html">Make an Announcement</a>
                             </li>
                             
                         </ul>
@@ -86,10 +112,21 @@
                     </li>
                     <li>
                         <a href="about.html">About Us</a>
-                        </li>
-                        <li>
-                        <a href="../Project SIS/Webpages/Login.php">Login</a>
-                        </li>
+                    </li>
+                    <li class="dropdown" id="menuLogin">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+                    <div class="dropdown-menu" style="padding:10px;">
+                        <form class="form" id="formLogin" action="" method="POST" onsubmit="return CheckForm()"> 
+                            <div class="control-group form-group">
+                             <input name="username" id="username" placeholder="Username" type="text" class="form-control"> 
+                             </div>
+                            <div class="control-group form-group">
+                             <input class="form-control" name="password" id="password" placeholder="Password" type="password">
+                            </div>
+                            <input class="btn btn-default" type="submit" name="submit" value="Submit" />
+                        </form>
+                    </div>
+                     </li>
            
 
 
@@ -218,10 +255,10 @@
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="../js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>

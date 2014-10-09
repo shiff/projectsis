@@ -21,7 +21,7 @@ class Profile
 	/*function for the login scenario*/
 	{
 		//session_start();
-		require_once("../Database/DB_Connect.php");
+		require_once("../database/DB_Connect.php");
 
 	//variables for POST method 
 	$username = $_POST["username"];
@@ -46,10 +46,10 @@ class Profile
 		
 		if($username == admin)
 			{
-			header("Location:../WebPages/Admin.php");
+			header("Location:../admin/Admin.php");
 			}
 		else{
-		header("Location:../WebPages/home.html");
+		header("Location:../webPages/Main Page.php");
 		exit;
 			}
 		}
